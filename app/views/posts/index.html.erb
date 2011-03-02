@@ -1,0 +1,30 @@
+<%# This view corresponds to the index action in the posts
+controller.  It takes the @posts instance variable, and 
+step through each element of the array in it, stuffing the element 
+into the post local variable.  This then gets passed to 
+the do-end loop. 
+
+Because this loop is 'behind the scenes', we need to use 
+non-displaying Ruby tags. %>
+
+<% @posts.each do |post| %>
+
+	<%# The contents of the loop will be executed once for each %>
+	<%# element in the @posts array.  The content of the local post %>
+	<%# variable are wrapped in displaying Ruby tags. %>
+	
+	<h1> <%= post.title %> </h1>
+	
+	<%# This takes the value of post.updated_at, and passes it %>
+	<%# through the strftime method to make the timestamp more %>
+	<%# human-readable. %>
+	<h5> <%= post.updated_at.strftime("%A %e %B %Y") %> </h5>
+	
+	<p> <%=  post.content %> </p>
+	
+	<hr />
+	
+<%# This is the end of the do-end loop - because it's %>
+<%# program flow and doesn't need displaying, we use non- %>
+<%# displaying Ruby tags. %>
+<% end %>

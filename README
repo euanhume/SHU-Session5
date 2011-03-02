@@ -1,0 +1,15 @@
+== BlogApp
+
+This is the source code for the class exercise from lecture 4.
+
+To run this application:
+
+1. Create the database with <tt>rake db:migrate</tt>
+
+2. Load the sample data with <tt>rake db:seed</tt>
+
+3. Start the Rails server with <tt>rails server</tt>
+
+4. Browse to <tt> http://localhost:3000 </tt>
+
+See the full lecture documentation at http://adoptioncurve.net/teaching
